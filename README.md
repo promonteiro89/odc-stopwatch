@@ -1,11 +1,11 @@
 # Stopwatch for ODC
 
 [![Platform](https://img.shields.io/badge/Platform-OutSystems_ODC-red.svg)](https://www.outsystems.com/odc/)
-[![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/download/dotnet/8.0)
+[![.NET](https://img.shields.io/badge/.NET-10.0-blue.svg)](https://dotnet.microsoft.com/download/dotnet/10.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Dependencies](https://img.shields.io/badge/Dependencies-None-brightgreen.svg)](#)
 
-A lightweight .NET 8.0 External Logic component for OutSystems Developer Cloud (ODC) that provides a precise, **server-clock stopwatch** — start, pause, resume, reset, read elapsed time, record laps, and format durations — with zero configuration.
+A lightweight .NET 10.0 External Logic component for OutSystems Developer Cloud (ODC) that provides a precise, **server-clock stopwatch** — start, pause, resume, reset, read elapsed time, record laps, and format durations — with zero configuration.
 
 ## Table of Contents
 
@@ -52,7 +52,7 @@ elapsed = AccumulatedMs + (IsRunning ? now − AnchorEpochMs : 0)
 ## Prerequisites
 
 - [OutSystems Developer Cloud (ODC)](https://www.outsystems.com/odc/)
-- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 
 No third-party packages — the library depends only on the OutSystems External Libraries SDK (compile-time) and the .NET base class library.
 
@@ -65,7 +65,7 @@ No third-party packages — the library depends only on the OutSystems External 
 dotnet build Stopwatch.csproj -c Release
 
 # Publish for ODC
-dotnet publish Stopwatch.csproj -c Release -f net8.0 --no-self-contained
+dotnet publish Stopwatch.csproj -c Release -f net10.0 --no-self-contained
 ```
 
 After publishing, zip the contents of the `publish/` folder (**excluding** `OutSystems.ExternalLibraries.SDK.dll`) and upload it to the ODC Portal under **External Logic**.
@@ -203,7 +203,7 @@ A recorded split.
 
 ```
 odc-stopwatch/
-├── Stopwatch.csproj        # net8.0, OutSystems External Libraries SDK 1.5.0
+├── Stopwatch.csproj        # net10.0, OutSystems External Libraries SDK 1.5.0
 ├── IStopwatchService.cs    # OSInterface & OSAction definitions
 ├── StopwatchService.cs     # Implementation (stateless; injectable clock)
 ├── StopwatchEngine.cs      # Pure, clock-free timing logic
