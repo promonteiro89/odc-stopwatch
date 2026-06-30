@@ -4,7 +4,7 @@ Thanks for your interest in improving Stopwatch_Library.
 
 ## Prerequisites
 
-- .NET 8 SDK (or newer, targeting `net8.0`)
+- .NET 10 SDK (targeting `net10.0`)
 
 ## Build
 
